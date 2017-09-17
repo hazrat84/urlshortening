@@ -108,6 +108,7 @@ class HomeController extends Controller
         static $gmp62;
         static $ratio;
         static $base_10;
+        static $result;
         if ($from_base<37) $val=strtoupper($val);
         if ($gmp===null) $gmp=function_exists('gmp_init');
         if ($gmp62===null) $gmp62=version_compare(PHP_VERSION,'5.3.2')>=0;
