@@ -54,7 +54,10 @@ return [
             'engine' => null,
             'sslmode' => env('DB_SSLMODE', 'prefer'),
             'options'   => array(
-                                PDO::MYSQL_ATTR_SSL_KEY    => '\ssl\BaltimoreCyberTrustRoot.crt.pem'),
+                                    PDO::MYSQL_ATTR_SSL_KEY  => '\ssl\DatabaseCACert.crt.pem'
+                                    PDO::MYSQL_ATTR_SSL_CERT => '\ssl\DatabaseCACert.crt.pem',
+                                    PDO::MYSQL_ATTR_SSL_CA   => '\ssl\DatabaseCACert.crt.pem',
+                                ),
         ],
 
         'pgsql' => [
